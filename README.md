@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Flask Movie Database Project
 
 A web application built with Flask to explore and display movie information using IMDB datasets and various movie APIs. This project serves as a learning playground for Flask framework features.
@@ -87,7 +86,3 @@ pip install -r requirements.txt
 
 # Run the application
 flask run
-=======
-# Fask
-A Flask app for testing, to explore futher this Framework.
->>>>>>> ab6a8bba3890144d7a595097443833b13e0115fc
