@@ -1,0 +1,6 @@
+flask_env/
+app_container/__pycache__/
+*.pyc
+.env
+.flaskenv
+.DS_Store

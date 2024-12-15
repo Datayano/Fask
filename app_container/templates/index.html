@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- SET THE ENCODING OF THE SITE -->
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta name="robots" content="noindex" ??? ou gestion avec le fichier robot.txt et .htaccess -->
+
+        {% block metatags %}
+        {% endblock metatags %}
+
+        {% if title %}
+        <title>MyApp Flask - {{ title }}</title>
+        {% else %}
+        <title>Welcome to MyApp Flask - My first Webapp</title>
+        {% endif %}
+
+    <!-- Bootstrap 5.3. style css-->
+
+
+    <!-- Custom styles for this template & favicon -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="icon" href="{{url_for('static', filename='images/varianceicon.svg')}}">
+
+    </head>
+
+    <body>
+        <h1 align="center">This is my first app with templates</h1>
+        <br>
+        <div align="'center">
+            <table>
+                <tr>
+                    <th>Titre</th>
+                    <th>Résumé du film</th>
+                    <th>Note du film</th>
+                    <th>Affiche du film</th>
+                </tr>
+            {% for data in datas %}
+                <tr>
+                    <td>{{ data[0] }}</td>
+                    <td>{{ data[1] }}</td>
+                    <td>{{ data[2] }}</td>
+                    <td><img src='{{ data[3] }}' classe="image" align="middle" /></td>
+                    
+
+                </tr>
+
+            {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>

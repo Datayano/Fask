@@ -1,0 +1,120 @@
+/* Reset de base pour uniformiser l'affichage */
+body, h1, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f3f4f7, #dcdde1);
+    color: #2f3640;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5rem;
+    color: #40739e;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Tableau */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* En-têtes de colonnes */
+th {
+    background: #273c75;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Contenu des cellules */
+td {
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Couleur alternée des lignes */
+tr:nth-child(odd) {
+    background: #f5f6fa;
+}
+tr:nth-child(even) {
+    background: #dcdde1;
+}
+
+/* Effet au survol des lignes */
+tr:hover {
+    background: #40739e;
+    color: #ffffff;
+    transform: scale(1.01);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Style des images */
+td img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    td img {
+        width: 80px;
+    }
+}
